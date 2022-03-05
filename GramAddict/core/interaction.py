@@ -917,6 +917,11 @@ def _watch_stories(
     if not session_state.check_limit(
         limit_type=session_state.Limit.WATCHES, output=True
     ):
+        
+        def like_story():
+            like_button = device.find(resourceIdMatches=ResourceID.STORY_LIKE_BUTTON)
+            if like_button.exists():
+                like_button.click()
 
         def watch_story() -> bool:
             if session_state.check_limit(
@@ -929,6 +934,7 @@ def _watch_stories(
             stories_counter += 1
             for _ in range(7):
                 random_sleep(0.5, 1, modulable=False, logging=False)
+                like_story()
                 if story_view.getUsername().strip().upper() != username.upper():
                     return False
             return True

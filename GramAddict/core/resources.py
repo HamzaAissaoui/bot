@@ -20,6 +20,7 @@ class ResourceID:
         self.BOTTOM_SHEET_CONTAINER_VIEW = f"{APP_ID}:id/bottom_sheet_container_view"
         self.BUTTON = f"{APP_ID}:id/button"
         self.CAROUSEL_MEDIA_GROUP = f"{APP_ID}:id/carousel_media_group"
+        self.STORY_LIKE_BUTTON = f"{APP_ID}:id/toolbar_like_button"
         self.CAROUSEL_IMAGE = f"{APP_ID}:id/carousel_image"
         self.CAROUSEL_IMAGE_MEDIA_GROUP = f"{APP_ID}:id/carousel_image_media_group"
         self.CAROUSEL_VIDEO_MEDIA_GROUP = f"{APP_ID}:id/carousel_video_media_group"
